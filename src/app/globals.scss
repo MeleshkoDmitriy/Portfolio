@@ -1,0 +1,29 @@
+@import '/src/app/variables.scss';
+
+* {
+  box-sizing: border-box;
+  background-color: $colorBlack;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $colorWhite;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content {
+  flex: 1 1 auto;
+}

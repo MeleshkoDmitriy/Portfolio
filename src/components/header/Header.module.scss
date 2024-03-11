@@ -1,0 +1,9 @@
+@import '/src/app/variables.scss';
+
+.header {
+    color: $colorWhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}

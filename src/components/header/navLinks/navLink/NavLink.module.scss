@@ -1,0 +1,16 @@
+@import "../../../../app/variables.scss";
+
+.link {
+    color: $colorWhite;
+    height: 30px;
+    padding-inline: 10px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    color: $colorDarkGrey;
+    background-color: $colorWhite;
+}
