@@ -1,6 +1,45 @@
 @import '/src/app/variables.scss';
 
+// .container {
+
+// }
+
 .nav {
     display: flex;
     gap: 20px;
+}
+
+.burgerButton {
+    display: none;
+    color: $colorWhite;
+    cursor: pointer;
+}
+
+.navMobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .burgerButton {
+        display: block;
+    }
+
+    .navMobile {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 50%;
+        height: calc(100vh - 100px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: $colorLightGrey;
+        padding-top: 20px;
+    }
+
 }

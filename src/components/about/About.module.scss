@@ -1,0 +1,99 @@
+@import '/src/app/variables.scss';
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    color: $colorWhite;
+
+    .imgContainer {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        min-width: 320px;
+        height: 320px;
+      }
+      
+      .imgContainer img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }      
+
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
+
+.name {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.description {
+    color: $colorLightGrey;
+    text-align: justify;
+}
+
+.gmail {
+    color: $colorLightGrey;
+    transition: $transition;
+    margin-bottom: 20px;
+
+    &:hover {
+        color: $colorWhite;
+    }
+
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .address {
+        padding-inline: 20px;
+        position: relative;
+        top: -3px;
+        font-size: 20px;
+    }
+
+    .copyButton {
+        color: $colorWhite;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.copied {
+    color: $colorWhite;
+}
+
+.links { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
+    .link {
+        color: $colorLightGrey;
+        transition: $transition;
+
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+}
+
+.socialIcons {
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}

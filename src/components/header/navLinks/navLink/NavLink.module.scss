@@ -4,10 +4,11 @@
     color: $colorWhite;
     height: 30px;
     padding-inline: 10px;
-    border-radius: 30px;
+    border-radius: $radius;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
 }
 
 .active {
