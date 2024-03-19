@@ -1,8 +1,11 @@
+import { ProjectsList } from "@/components/projectsList/ProjectsList";
 
 
 
 export default function ProjectsPage () {
     return (
-        <span>projects</span>
+        <section>
+            <ProjectsList />
+        </section>
     )
 }

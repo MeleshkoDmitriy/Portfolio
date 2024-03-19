@@ -1,7 +1,8 @@
 'use client'
 import { useState } from 'react'
 import styles from './Header.module.scss'
-import { NavLinks } from './navLinks/NavLinks'
+import { NavLinks } from './navLinks/NavLinks';
+import { LuDot } from "react-icons/lu";
 
 export const Header = () => {
 
@@ -10,8 +11,9 @@ export const Header = () => {
     return (
         <header className={styles.header}>
                 <div className={styles.offer}>
-                    Currently: {isSearching ? <span>looking for offer</span>
-                                            : <span>already employed</span>}
+                    <b className={styles.currently}>Currently:</b> 
+                        {isSearching    ? <span className={styles.status}>Looking for Offer<LuDot className={styles.dot}/></span>
+                                        : <span className={styles.status}>Already Employed</span>}
                 </div>
                 <NavLinks />
         </header>

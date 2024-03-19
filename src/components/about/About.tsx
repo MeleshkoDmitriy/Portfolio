@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import styles from "./About.module.scss"
-import dmitriy from "../../../public/dmitriy.jpeg"
+import dmitriy from "../../../public/image/dmitriy.jpeg"
 import { useState } from "react"
 import { FaRegCopy } from "react-icons/fa";
 import { IoMdDoneAll } from "react-icons/io";
@@ -15,14 +15,19 @@ import { FaLinkedin } from "react-icons/fa";
 
 export const About = () => {
 
-    const [ isGmailCopy, setGmailCopy ] = useState(false);
+    const [ isGmailCopied, setGmailCopied ] = useState(false);
 
     const gmail = "dimitrusmeleskausas@gmail.com";
 
     const handleCopy = () => {
-        setGmailCopy(true);
+        setGmailCopied(true);
         navigator.clipboard.writeText(gmail);
-    }
+        setTimeout(() => {
+            setGmailCopied(false);
+        }, 500)
+    };
+
+
 
     return (
         <section className={styles.container}>
@@ -34,13 +39,15 @@ export const About = () => {
             <div className={styles.textContainer}>
                 <h1 className={styles.name}>Dmitriy Meleshko</h1>
                 <p className={styles.description}>A young and ambitious Frontend React Developer. My passion lies in creating appealing user interfaces and currently, my main goal is to gain commercial experience in this field. I am ready for active learning, adopting cutting-edge methods and closely collaborating within a team. I have significant experience in communication and successful participation in team events. Actively studying modern technologies in the field of application development.</p>
-                <div className={`${styles.gmail} ${isGmailCopy && styles.copied}`}>
+                <div className={styles.gmail}>
                     <span className={styles.icon}><IoIosMail /></span>
                     <span className={styles.address}>{gmail}</span>
                     <button className={`${styles.copyButton} ${styles.icon}`} onClick={handleCopy}>
-                        { isGmailCopy   ?   <IoMdDoneAll />
-                                        :   <FaRegCopy />}
+                        <FaRegCopy />
                     </button>
+                    <span className={styles.doneWrapper}>
+                        <IoMdDoneAll className={`${styles.done} ${styles.icon} ${isGmailCopied && styles.animation}`}/>
+                    </span>
                 </div>
                 <div className={styles.links}>
                     <Link target="blank" className={styles.link} href="https://github.com/MeleshkoDmitriy"><ImGithub className={styles.socialIcons}/>GitHub</Link>

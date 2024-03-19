@@ -9,12 +9,12 @@
     color: $colorWhite;
 
     .imgContainer {
-        border-radius: 10px;
+        border-radius: 50%;
         overflow: hidden;
         position: relative;
         min-width: 320px;
         height: 320px;
-      }
+    }
       
       .imgContainer img {
         width: auto;
@@ -32,7 +32,7 @@
 }
 
 .name {
-    font-size: 25px;
+    font-size: $extra;
     padding: 0;
     margin: 0;
 }
@@ -40,6 +40,7 @@
 .description {
     color: $colorLightGrey;
     text-align: justify;
+    font-size: $text;
 }
 
 .gmail {
@@ -53,14 +54,14 @@
 
 
     .icon {
-        font-size: 20px;
+        font-size: $medium;
     }
 
     .address {
         padding-inline: 20px;
         position: relative;
         top: -3px;
-        font-size: 20px;
+        font-size: $medium;
     }
 
     .copyButton {
@@ -68,19 +69,50 @@
         outline: none;
         border: none;
         cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .doneWrapper {
+
+        .done {
+            color: transparent;
+        }
+    }
+
+}
+
+
+@keyframes fadeAnimation {
+    0% {
+        color: transparent;
+    }
+
+    50%{
+        color: $colorWhite;
+    }
+
+    100% {
+        color: transparent;
     }
 }
+
+.animation {
+    animation: fadeAnimation 0.5s ease-in;
+}
+
 
 .copied {
     color: $colorWhite;
 }
+
+
 
 .links { 
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
+    font-size: $medium;
 
     .link {
         color: $colorLightGrey;

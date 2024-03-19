@@ -1,0 +1,85 @@
+@import '../../../app/variables.scss';
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    .title {
+        font-size: $title;
+        margin-bottom: 10px;
+        color: $colorLightGrey;
+    }
+
+    .imageWrapper {
+        position: relative;
+        
+        .image {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
+
+.description {
+    color: $colorLightGrey;
+    font-size: $medium;
+    text-align: justify;
+}
+
+.panel {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.iconsWrapper {
+    display: flex;
+    gap: 20px;
+    align-self: start;
+
+    .icon {
+        font-size: $extra;
+        color: $colorLightGrey;
+        transition: $transition;
+
+        &:hover {
+            cursor: pointer;
+            color: $colorWhite;
+        }
+    }
+}
+
+.button {
+    outline: none;
+    border: 1px solid $colorLightGrey;
+    color: $colorLightGrey;
+    padding: 10px;
+    font-size: $medium;
+    border-radius: $radius;
+    transition: $transition;
+
+    &:hover {
+        cursor: pointer;
+        color: $colorWhite;
+        border: 1px solid $colorWhite;
+    }
+}

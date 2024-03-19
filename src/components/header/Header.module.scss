@@ -7,3 +7,41 @@
     align-items: center;
     min-height: 100px;
 }
+
+.offer {
+
+    .currently {
+        font-size: 25px;
+        margin-right: 5px;
+        color: $colorLightGrey;
+    }
+
+    .status {
+        font-size: 20px;
+    }
+
+    .dot {
+        border: 3px solid $colorWhite;
+        border-radius: 50%;
+        width: 2px;
+        height: 2px;
+        position: relative;
+        top: -3px;
+        left: 10px;
+        animation: pulseAnimation 2s infinite;
+    }
+}
+
+@keyframes pulseAnimation {
+    0% {
+        box-shadow: 0 0 0px $colorWhite;
+    }
+
+    30% {
+        box-shadow:  0 0 10px $colorWhite;
+    }
+
+    100% {
+        box-shadow: 0 0 0px $colorWhite;
+    }
+}
