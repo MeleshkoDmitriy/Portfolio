@@ -1,5 +1,39 @@
 @import '/src/app/variables.scss';
 
 .footer {
-    color: $colorWhite;
+    color: $colorLightGrey;
+    transition: $transition;
+    font-size: $medium;
+    padding: 20px 0;
+}
+
+.info {
+    
+    .link {
+        &:hover {
+            color: $colorWhite;
+        }
+    }
+}
+
+.stack {
+    display: flex;
+    margin-top: 20px;
+
+    .icons {
+        margin-left: 10px;
+        display: flex;
+        gap: 10px;
+
+        .icon {
+            transition: $transition;
+            font-size: $title;
+            color: $colorLightGrey;
+
+            &:hover {
+                color: $colorWhite;
+                cursor: pointer;
+            }
+        }
+    }
 }

@@ -19,13 +19,14 @@ const links:Link[] = [
         path: "/projects"
     },
     {
-        title: "About",
-        path: "/about"
-    },
-    {
         title: "Contacts",
         path: "/contacts"
     },
+    {
+        title: "Feedback",
+        path: "/feedback"
+    },
+
 ]
 
 export const NavLinks = () => {

@@ -3,11 +3,13 @@
 * {
   box-sizing: border-box;
   background-color: $colorBlack;
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
 }
 
 a {
@@ -25,39 +27,6 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: $colorWhite;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $colorLightGrey;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(77, 77, 77);
-}
-
-::-moz-scrollbar {
-  width: 10px;
-}
-
-::-moz-scrollbar-track {
-  background: $colorWhite;
-}
-
-::-moz-scrollbar-thumb {
-  background: $colorLightGrey;
-}
-
-::-moz-scrollbar-thumb:hover {
-  background: rgb(77, 77, 77);
 }
 
 @media (max-width: 900px) {
@@ -77,3 +46,38 @@ a {
     width: 320px;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  transition: $transition;
+}
+
+::-webkit-scrollbar-track {
+  background: $colorBlack;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $colorLightGrey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $colorWhite;
+}
+
+::-moz-scrollbar {
+  width: 10px;
+  transition: $transition;
+}
+
+::-moz-scrollbar-track {
+  background: $colorBlack;
+}
+
+::-moz-scrollbar-thumb {
+  background: $colorLightGrey;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background: $colorWhite;
+}
+

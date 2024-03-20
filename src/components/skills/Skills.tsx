@@ -47,16 +47,6 @@ export const techs = {
 
 export const Skills = () => {
 
-    // const skillsList = [
-    //     'JavaScript / TypeScript', 
-    //     'React / NextJS', 
-    //     'React-Query (TanStack Query) / Axios', 
-    //     'Redux Toolkit / RTK Query', 
-    //     'Styled Components / TailwindCSS',
-    //     'Material-UI / Ant Design',
-    //     'HTML / CSS / SASS / SCSS-modules',
-    //     'Other Popular Libraries'
-    // ]
 
     const skillsList = [
         'JavaScript',
@@ -83,13 +73,6 @@ export const Skills = () => {
             <div className={styles.technology}>
                 <h3 className={styles.title}>Stack of Technologies:</h3>
                 <div className={styles.wrapper}>
-                    {/* {skillsList.map((skill) => {
-                        return  <Link   href='https://github.com/MeleshkoDmitriy?tab=repositories' 
-                                        target="blank"
-                                        key={skill}>
-                                    <div className={styles.item}>{skill}</div>
-                                </Link>
-                    })} */}
                                 {skillsList.map((tech) => {
                                      if (tech in techs) {
                                         return  <Link   href='https://github.com/MeleshkoDmitriy?tab=repositories' 

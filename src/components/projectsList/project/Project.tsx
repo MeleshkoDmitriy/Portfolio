@@ -64,7 +64,10 @@ export const Project = ( project ) => {
                 {title}
             </span>
             <div className={styles.imageWrapper}>
-                    <Image src={image}  alt={title} className={styles.image}/>
+                    <Image 
+                        src={image}  alt={title} 
+                        className={styles.image}
+                        placeholder='blur'/>
             </div>
             <div className={styles.body}>
                 <div className={styles.description}>

@@ -1,8 +1,7 @@
-import onlineShop from '../../../public/screens/onlineShop.png';
-import todolist from '../../../public/screens/todolist.png';
-import muisic from '../../../public/screens/muisic.png';
-import wildturkey from '../../../public/screens/wild-turkey.png';
-
+import onlineShop from '../../../public/screens/onlineShop.jpeg';
+import todolist from '../../../public/screens/todolist.jpeg';
+import muisic from '../../../public/screens/muisic.jpeg';
+import wildturkey from '../../../public/screens/wildTurkey.jpeg';
 
 
 export const projects = [

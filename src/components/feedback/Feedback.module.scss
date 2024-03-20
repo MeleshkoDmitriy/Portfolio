@@ -1,0 +1,90 @@
+@import '../../app/variables.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        color: $colorWhite;
+        font-size: $title;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        font-size: $medium;
+        color: $colorLightGrey;
+
+        & p {
+            text-align: justify;
+            margin-top: 0;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .inputGroup {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.input {
+    flex: 1 1 50%;
+}
+
+.textarea {
+    resize: none;
+    min-height: 200px;
+}
+
+.input,
+.textarea {
+    padding: 20px;
+    color: $colorWhite;
+    outline: none;
+    font-size: $medium;
+    border: 1px solid $colorLightGrey;
+    transition: $transition;
+    border-radius: $radius;
+
+    &::placeholder {
+        color: $colorLightGrey;
+        opacity: 0.5;
+    }
+
+    &:focus,
+    &:hover {
+        border: 1px solid $colorWhite;
+    }
+
+}
+
+.buttonWrapper {
+    display: flex;
+    padding-right: 20px;
+}
+
+.button {
+    width: 50%;
+    transition: $transition;
+    padding: 20px;
+    outline: none;
+    font-size: $medium;
+    border-radius: $radius;
+    color: $colorDarkGrey;
+    background-color: $colorLightGrey;
+    border: 1px solid $colorLightGrey;
+
+
+    &:hover,
+    &:focus {
+        color: $colorBlack;
+        background-color: $colorWhite;
+        border: 1px solid $colorWhite;
+        cursor: pointer;
+    }
+}

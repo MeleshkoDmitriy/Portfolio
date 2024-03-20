@@ -34,6 +34,7 @@ export const About = () => {
             <div className={styles.imgContainer}>
                 <Image  src={dmitriy} alt="Dmitriy"
                         fill
+                        placeholder='blur'
                         />
             </div>
             <div className={styles.textContainer}>
