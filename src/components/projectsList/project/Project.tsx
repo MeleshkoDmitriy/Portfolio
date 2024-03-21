@@ -2,8 +2,6 @@ import Image from 'next/image';
 import styles from './Project.module.scss';
 import Link from 'next/link';
 
-
-
 import { 
     SiHtml5, 
     SiCss3, 
@@ -29,19 +27,19 @@ export const techs = {
     HTML: <SiHtml5 />,
     CSS: <SiCss3 />,
     SCSS: <SiSass />,
-    SCSSmodules: <SiCssmodules />,
+    'SCSS modules': <SiCssmodules />,
     JavaScript: <SiJavascript />,
     TypeScript: <SiTypescript />,
     React: <SiReact />,
     Redux: <SiRedux />,
     NextJS: <SiNextdotjs />,
-    ReactQuery: <SiReactquery />,
-    ReactRouter: <SiReactrouter />,
-    Axios: <SiAxios />,
-    StyledComponents: <SiStyledcomponents />,
+    'ReactQuery': <SiReactquery />,
+    'React Router': <SiReactrouter />,
+    'Axios': <SiAxios />,
+    'Styled Components': <SiStyledcomponents />,
     TailwindCSS: <SiTailwindcss />,
     'Material-UI': <SiMui />,
-    AntDesign: <SiAntdesign />,
+    'AntDesign': <SiAntdesign />,
     GitHub: <SiGithub />,
     Netlify: <SiNetlify />,
 }
@@ -60,9 +58,9 @@ export const Project = ( project ) => {
 
     return (
         <div className={styles.container}>
-            <span className={styles.title}>
+            <h3 className={styles.title}>
                 {title}
-            </span>
+            </h3>
             <div className={styles.imageWrapper}>
                     <Image 
                         src={image}  alt={title} 
@@ -87,19 +85,19 @@ export const Project = ( project ) => {
                                  })}
                     </div>
                     <div className={styles.actions}>
-                                {/* <Link> */}
+                                <Link href={`/projects/${id}`}>
                                     <button className={styles.button}>
                                             Learn more
                                     </button>
-                                {/* </Link> */}
+                                </Link>
                                 <Link href={github} target='blank'>
                                     <button className={styles.button}>
-                                            GitHub {techs.GitHub}
+                                            GitHub<span>{techs.GitHub}</span>
                                     </button>
                                 </Link>
                                 <Link href={netlify} target='blank'>
                                     <button className={styles.button}>
-                                            Netlify {techs.Netlify}
+                                            Netlify<span>{techs.Netlify}</span>
                                     </button>
                                 </Link>
                     </div>

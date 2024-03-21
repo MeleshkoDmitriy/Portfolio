@@ -81,7 +81,8 @@
 
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
         color: $colorBlack;
         background-color: $colorWhite;
         border: 1px solid $colorWhite;

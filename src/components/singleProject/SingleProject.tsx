@@ -1,0 +1,87 @@
+import Image from 'next/image';
+import styles from './SingleProject.module.scss';
+import Link from 'next/link';
+import { techs } from '../skills/Skills';
+import { IoHomeOutline } from "react-icons/io5";
+
+
+export const SingleProject = ( project ) => {
+
+    const { 
+        id,
+        title,
+        description,
+        image,
+        stack,
+        features,
+        github,
+        netlify
+     } = project;
+
+    return (
+        <section className={styles.container} id={id}>
+            <h1 className={styles.title}>{title}</h1>
+            <div className={styles.imageWrapper}>
+                    <Image
+                        src={image}  alt={title} 
+                        className={styles.image}
+                        placeholder='blur'/>
+            </div>
+            <div className={styles.body}>
+                <div className={styles.description}>
+                    {description}
+                </div>
+                <div className={styles.infoBlock}>
+                    <div className={styles.features}>
+                        <h4 className={styles.subTitle}>
+                            Features:
+                        </h4>
+                        <ul className={styles.list}>
+                            {features?.map((feature) => {
+                                return <li key={feature} className={styles.item}>{feature}</li>
+                            })}
+                        </ul>
+                    </div>
+                    <div className={styles.panel}>
+                        <div className={styles.iconsWrapper}>
+                            <h4 className={styles.subTitle}>Project stack:</h4>
+                            <ul className={styles.list}>
+                                {stack.map((tech) => {
+                                        if (tech in techs) {
+                                            return (
+                                                <li key={tech} className={`${styles.icon} ${styles.item}`}>
+                                                    <span>{techs[tech]}</span> {tech}
+                                                </li>
+                                            );
+                                        }
+                                        return  <li key={tech} className={`${styles.icon} ${styles.item}`}>
+                                                    {tech}
+                                                </li>;
+                                })}
+                            </ul>
+
+                        </div>
+                        <div className={styles.actions}>
+                                    <Link href={github} target='blank'>
+                                        <button className={styles.button}>
+                                                GitHub {techs.GitHub}
+                                        </button>
+                                    </Link>
+                                    <Link href={netlify} target='blank'>
+                                        <button className={styles.button}>
+                                                Netlify {techs.Netlify}
+                                        </button>
+                                    </Link>
+                                    <Link href='/'>
+                                        <button className={styles.button}>
+                                                Home Page <IoHomeOutline />
+                                        </button>
+                                    </Link>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    )
+}

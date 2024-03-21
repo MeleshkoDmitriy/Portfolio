@@ -53,18 +53,18 @@ export const Skills = () => {
         'TypeScript', 
         'React',
         'NextJS', 
+        'ReactQuery',
         'Redux',
         'Redux Toolkit  / RTKQuery',  
-        'ReactQuery',
         'Axios', 
         'StyledComponents', 
         'TailwindCSS',
-        'SCSSmodules',
         'Material-UI', 
         'AntDesign',
-        'HTML', 
         'CSS', 
         'SCSS', 
+        'SCSSmodules',
+        'HTML', 
         'Other Popular Libraries'
     ]
 

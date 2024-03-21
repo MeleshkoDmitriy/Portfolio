@@ -6,7 +6,7 @@ import wildturkey from '../../../public/screens/wildTurkey.jpeg';
 
 export const projects = [
     {   
-        id: 1,
+        id: 4,
         title: 'Online Shop Pioneer',
         image: onlineShop,
         description: 'Online Shop Pioneer is a web application that serves as an online marketplace for a wide range of products. Users can browse through different product categories, view detailed product descriptions, add items to their cart, set favorites products and make orders.',
@@ -23,7 +23,7 @@ export const projects = [
         netlify: 'https://famous-heliotrope-04888a.netlify.app/',
     },
     {   
-        id: 2,
+        id: 3,
         title: 'Todolist App',
         image: todolist,
         description: 'This is a TodoList application built with React and TypeScript. The app allows users to create, update, and delete tasks in various categories. It also provides features like marking tasks as completed and filtering tasks based on category.',
@@ -39,7 +39,7 @@ export const projects = [
         netlify: 'https://dynamic-kitten-7e1916.netlify.app/',
     },
     {   
-        id: 3,
+        id: 2,
         title: 'Muisic',
         image: muisic,
         description: 'Muisic - Music App made up with MUI library and React. It is simple web application which gives you opportunity to listen music. This project have only one electronic playlist right now, but it is can be more.',
@@ -56,7 +56,7 @@ export const projects = [
         netlify: 'https://deft-stardust-687370.netlify.app/',
     },
     {   
-        id: 4,
+        id: 1,
         title: 'Wild Turkey Bourbon',
         image: wildturkey,
         description: 'This site is about Wild Turkey Bourbon company. I made a responsive layout up to 320px. Registration and authentication work with cookie. Please use english language to sign up and log in. You able to add products to your cart, change quantity or delete products. You will always know the price of your purchase.',
@@ -64,9 +64,10 @@ export const projects = [
         features: [
             'Registration and Authentication.',
             'Add products to your cart.',
-            'Responsive layout',
+            'Responsive layout up to 320px.',
         ],
         github: 'https://github.com/MeleshkoDmitriy/Wild-Turkey',
         netlify: 'https://moonlit-truffle-90e9b5.netlify.app/',
     },
 ]
+

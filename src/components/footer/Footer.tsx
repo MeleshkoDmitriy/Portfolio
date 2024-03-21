@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from './Footer.module.scss';
 import { SiGithub, SiNextdotjs, SiReact, SiTypescript, SiSass, SiCssmodules } from "react-icons/si";
+import { PiFramerLogoFill } from "react-icons/pi";
 
 export const Footer = () => {
     return (
@@ -33,8 +34,13 @@ export const Footer = () => {
                     </Link>
                     <Link   href='https://github.com/MeleshkoDmitriy/Portfolio'
                             target='blank'>
+                                <PiFramerLogoFill className={styles.icon}/>
+                    </Link>
+                    <Link   href='https://github.com/MeleshkoDmitriy/Portfolio'
+                            target='blank'>
                                 <SiCssmodules className={styles.icon}/>
                     </Link>
+
                 </div>
             </div>
 

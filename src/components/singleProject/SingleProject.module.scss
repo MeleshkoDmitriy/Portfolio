@@ -1,5 +1,4 @@
-@import '../../../app/variables.scss';
-
+@import '../../app/variables.scss';
 
 .container {
     display: flex;
@@ -10,16 +9,13 @@
     .title {
         font-size: $title;
         margin-bottom: 10px;
-        color: $colorLightGrey;
-        margin: 0;
+        color: $colorWhite;
     }
 
     .imageWrapper {
         position: relative;
-
         
         .image {
-            // object-fit: cover;
             width: 100%;
             height: auto;
         }
@@ -33,19 +29,45 @@
 }
 
 
-
-
 .description {
     color: $colorLightGrey;
     font-size: $medium;
     text-align: justify;
 }
 
-.panel {
+.infoBlock {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    gap: 20px;
+
+    .features {
+        flex: 1 1 50%;
+        color: $colorLightGrey;
+        font-size: $medium;
+    }
+
+    .panel {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+.subTitle {
+    font-size: $title;
+    color: $colorLightGrey;
+    padding: 0;
+    margin: 0;
+}
+
+.list {
+    padding-left: 20px;
+}
+
+.item {
+    padding-bottom: 10px;
 }
 
 .actions {
@@ -56,13 +78,18 @@
 
 .iconsWrapper {
     display: flex;
-    gap: 20px;
-    align-self: start;
+    flex-direction: column;
 
     .icon {
-        font-size: $extra;
+        font-size: $medium;
         color: $colorLightGrey;
         transition: $transition;
+
+        span {
+            position: relative;
+            top: 3px;
+            margin-right: 3px;
+        }
 
         &:hover {
             cursor: pointer;
@@ -79,12 +106,6 @@
     font-size: $medium;
     border-radius: $radius;
     transition: $transition;
-
-    span {
-        position: relative;
-        top: 2px;
-        margin-left: 10px;
-    }
 
     &:hover {
         cursor: pointer;
