@@ -51,10 +51,10 @@ export const About = () => {
                     </span>
                 </div>
                 <div className={styles.links}>
-                    <Link target="blank" className={styles.link} href="https://github.com/MeleshkoDmitriy"><ImGithub className={styles.socialIcons}/>GitHub</Link>
-                    <Link target="blank" className={styles.link} href="https://telegram.me/dimitrusmeleskausas"><FaTelegram className={styles.socialIcons}/>Telegram</Link>
-                    <Link target="blank" className={styles.link} href="https://docs.google.com/document/d/1zAFl5OjQKbYHxi6nC0qBIV1XbiYje089FT2CnngGyJk/edit?usp=drive_link"><IoDocumentTextSharp className={styles.socialIcons}/>Resume</Link>
-                    <Link target="blank" className={styles.link} href="https://www.linkedin.com/in/dmitriy-meleshko-7034672b2/"><FaLinkedin className={styles.socialIcons}/>Linkedin</Link>
+                    <Link target="blank" className={styles.link} href="https://github.com/MeleshkoDmitriy"><ImGithub className={`${styles.socialIcons} ${styles.github}`}/>GitHub</Link>
+                    <Link target="blank" className={styles.link} href="https://telegram.me/dimitrusmeleskausas"><FaTelegram className={`${styles.socialIcons} ${styles.telegram}`}/>Telegram</Link>
+                    <Link target="blank" className={styles.link} href="https://docs.google.com/document/d/1zAFl5OjQKbYHxi6nC0qBIV1XbiYje089FT2CnngGyJk/edit?usp=drive_link"><IoDocumentTextSharp className={`${styles.socialIcons} ${styles.resume}`}/>Resume</Link>
+                    <Link target="blank" className={styles.link} href="https://www.linkedin.com/in/dmitriy-meleshko-7034672b2/"><FaLinkedin className={`${styles.socialIcons} ${styles.linkedin}`}/>Linkedin</Link>
                 </div>
             </div>
         </section>

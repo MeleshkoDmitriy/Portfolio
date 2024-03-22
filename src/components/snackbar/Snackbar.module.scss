@@ -1,0 +1,14 @@
+@import '../../app/variables.scss';
+
+.snackbar {
+    background-color: $colorWhite;
+    color: $colorBlack;
+    font-size: $medium;
+    padding: 20px;
+    border-radius: $radius;
+    border: 1px solid $colorLightGrey;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}

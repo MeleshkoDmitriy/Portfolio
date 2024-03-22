@@ -1,0 +1,16 @@
+@import '../../app/variables.scss';
+
+.title {
+    font-size: $title;
+    color: $colorWhite;
+}
+
+.item {
+    font-size: $medium;
+    color: $colorLightGrey;
+    padding-bottom: 10px;
+}
+
+.list {
+    padding-left: 20px;
+}

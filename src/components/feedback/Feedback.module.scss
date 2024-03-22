@@ -32,14 +32,54 @@
     }
 }
 
-.input {
+.inputWrapper {
     flex: 1 1 50%;
+    position: relative;
+
+    .input {
+        width: 100%;
+    }
+
 }
 
-.textarea {
-    resize: none;
-    min-height: 200px;
+
+.textareaWrapper {
+    width: 100%;
+    position: relative;
+
+    .textarea {
+        resize: none;
+        min-height: 200px;
+        width: 100%;
+    }
 }
+
+.crossTextarea, 
+.crossInput {
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    color: $colorLightGrey;
+    font-size: $title;
+    transition: $transition;
+    background-color: transparent;
+    opacity: 0;
+    visibility: hidden;
+
+    &:hover,
+    &:active {
+        color: $colorWhite;
+        cursor: pointer;
+    }
+
+
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .input,
 .textarea {

@@ -1,6 +1,6 @@
 "use client"
-import styles from './NotFound.module.scss';
 import { useRouter } from 'next/navigation';
+import styles from './NotFound.module.scss';
 import { IoHomeOutline } from "react-icons/io5";
 import { IoIosList } from "react-icons/io";
 import { IoArrowBackOutline } from "react-icons/io5";
@@ -10,9 +10,9 @@ export default function NotFound () {
     const router = useRouter();
 
     return (
-        <section className={styles.container}>
-                <h1 className={styles.title}>Not found such a project!</h1>
-                <div className={styles.actions}>
+        <div className={styles.container}>
+            <h1 className={styles.title}>Page Not Found</h1>
+            <div className={styles.actions}>
                     <button className={styles.button}
                             onClick={() => router.back()}
                             >
@@ -29,6 +29,7 @@ export default function NotFound () {
                         <span><IoHomeOutline /></span>Home 
                     </button>
                 </div>
-        </section>
+            
+        </div>
     )
 }

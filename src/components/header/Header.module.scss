@@ -6,17 +6,23 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 65px;
+    background-color: $colorBlack;
 }
 
 .offer {
+    padding: 10px;
+    border-radius: $radius;
+    background-color: $colorBlack;
 
     .currently {
         font-size: 25px;
         margin-right: 5px;
         color: $colorWhite;
     }
-
-
 
     .dot {
         border: 3px solid $colorWhite;

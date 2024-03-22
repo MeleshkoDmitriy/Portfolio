@@ -4,3 +4,26 @@
     color: $colorWhite;
 }
 
+.loading {
+    width: 100%;
+    height: 70dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .spinner {
+        color: $colorLightGrey;
+        font-size: $extra;
+        animation: spinnerAnimation 1s infinite;
+    }
+}
+
+@keyframes spinnerAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -92,3 +92,33 @@
         border: 1px solid $colorWhite;
     }
 }
+
+.learn {
+    animation: pulseAnimation 3s infinite;
+
+    &:hover {
+        animation: none;
+    }
+}
+
+@keyframes pulseAnimation {
+    0% {
+        border: 1px solid $colorLightGrey;
+        color: $colorLightGrey;
+    }
+
+    50% {
+        border: 1px solid $colorLightGrey;
+        color: $colorLightGrey;
+    }
+
+    75% {
+        border: 1px solid $colorWhite;
+        color: $colorWhite;
+    }
+
+    100% {
+        border: 1px solid $colorLightGrey;
+        color: $colorLightGrey;
+    }
+}

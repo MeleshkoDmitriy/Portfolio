@@ -65,6 +65,7 @@ export const Project = ( project ) => {
                     <Image 
                         src={image}  alt={title} 
                         className={styles.image}
+                        loading='lazy'
                         placeholder='blur'/>
             </div>
             <div className={styles.body}>
@@ -86,7 +87,7 @@ export const Project = ( project ) => {
                     </div>
                     <div className={styles.actions}>
                                 <Link href={`/projects/${id}`}>
-                                    <button className={styles.button}>
+                                    <button className={`${styles.button} ${styles.learn}`}>
                                             Learn more
                                     </button>
                                 </Link>

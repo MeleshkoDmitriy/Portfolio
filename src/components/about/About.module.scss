@@ -120,6 +120,23 @@
 
         &:hover {
             color: $colorWhite;
+
+            .github {
+                color: $colorGitHub;
+                transition: $transition;
+            }
+            .telegram {
+                color: $colorTelegram;
+                transition: $transition;
+            }
+            .resume {
+                color: $colorResume;
+                transition: $transition;
+            }
+            .linkedin {
+                color: $colorLinkedin;
+                transition: $transition;
+            }
         }
     }
 }
@@ -129,3 +146,4 @@
     position: relative;
     top: 3px;
 }
+
