@@ -1,6 +1,7 @@
 @import '../../app/variables.scss';
 
 .container {
+    padding-inline: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;

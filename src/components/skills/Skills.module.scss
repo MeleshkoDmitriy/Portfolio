@@ -1,6 +1,7 @@
 @import '../../app/variables.scss';
 
 .container {
+    padding-inline: 10px;
     display: flex;
     flex-direction: column;
 
@@ -34,3 +35,21 @@
     }
 }
 
+@media (max-width: 750px) {
+    .container {
+
+        .title {
+            font-size: $medium;
+        }
+
+        .wrapper {
+            gap: 10px;
+        }
+    
+        .item {
+            font-size: $text;
+            padding: 5px;
+        }
+    }
+
+}

@@ -1,28 +1,28 @@
 @import '/src/app/variables.scss';
 
-// .container {
-//     background-color: transparent;
-//     backdrop-filter: blur(20px);
-// }
 
 .nav {
     display: flex;
     gap: 20px;
-    background-color: transparent;
-    backdrop-filter: blur(20px);
 }
 
 .burgerButton {
+    position: relative;
+    top: 3px;
     display: none;
     color: $colorWhite;
     cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: $title;
 }
 
 .navMobile {
-    display: none;
+    display: block;
+    right: 100%;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 750px) {
     .nav {
         display: none;
     }
@@ -32,9 +32,9 @@
     }
 
     .navMobile {
-        position: absolute;
-        top: 65px;
-        right: 0;
+        position: fixed;
+        top: 80px;
+        right: 0%;
         width: 50%;
         height: calc(100vh - 65px);
         display: flex;
@@ -42,6 +42,7 @@
         align-items: center;
         gap: 20px;
         padding-top: 20px;
+        background-color: $colorBlack;
     }
 
 }

@@ -29,21 +29,21 @@ a {
   flex-direction: column;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .container {
-    width: 768px;
+    width: 740px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .container {
-    width: 480px;
+    width: 470px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    width: 320px;
+    width: 300px;
   }
 }
 

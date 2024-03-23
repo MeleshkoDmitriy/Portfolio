@@ -17,9 +17,7 @@
     .imageWrapper {
         position: relative;
 
-        
         .image {
-            // object-fit: cover;
             width: 100%;
             height: auto;
         }
@@ -98,6 +96,7 @@
 
     &:hover {
         animation: none;
+        transition: $transition;
     }
 }
 
@@ -120,5 +119,63 @@
     100% {
         border: 1px solid $colorLightGrey;
         color: $colorLightGrey;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        gap: 10px;
+
+        .title {
+            font-size: $text;
+        }
+    
+        .description {
+            font-size: $text;
+        }
+
+        .panel {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+
+            .iconsWrapper {
+                align-self: center;
+            }
+
+            .actions {
+
+                .button {
+                    font-size: $text;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .container {
+        
+        .body {
+            gap: 10px;
+        }
+        .panel {
+            .iconsWrapper {
+                .icon {
+                    font-size: $medium;
+                }
+            }
+            .actions {
+                .button {
+                    padding: 5px 5px;
+
+                    & span {
+                        display: none
+                    }
+                }
+            }
+        } 
     }
 }

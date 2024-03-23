@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from './NavLinks.module.scss';
 import { NavLink } from "./navLink/NavLink";
 import { useState } from "react";
+import { TbMenu2 } from "react-icons/tb";
+import { CgClose } from "react-icons/cg";
 
 interface Link {
     title: string,
@@ -42,7 +44,8 @@ export const NavLinks = () => {
             </nav>
             <button onClick={() => setMenuOpen(prev => !prev)}
                     className={styles.burgerButton}>
-                        BURGER
+                    {isMenuOpen ? <CgClose />
+                                : <TbMenu2 />}
             </button>
             {isMenuOpen &&  <nav className={styles.navMobile}>
                                 {links.map((link) => {

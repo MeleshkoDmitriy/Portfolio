@@ -5,8 +5,9 @@
     color: $colorLightGrey;
     transition: $transition;
     font-size: $medium;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
+
 
 .info {
     
@@ -15,6 +16,11 @@
             color: $colorWhite;
         }
     }
+}
+
+.iconGitHub {
+    position: relative;
+    top: 3px;
 }
 
 .stack {
@@ -36,5 +42,14 @@
                 cursor: pointer;
             }
         }
+    }
+}
+
+@media (max-width: 750px) {
+    .footer {
+        font-size: $text;
+    }
+    .stack .icons .icon {
+        font-size: $text;
     }
 }

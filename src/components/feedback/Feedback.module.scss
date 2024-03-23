@@ -1,6 +1,7 @@
 @import '../../app/variables.scss';
 
 .container {
+    padding-inline: 10px;
     display: flex;
     flex-direction: column;
 
@@ -49,7 +50,7 @@
 
     .textarea {
         resize: none;
-        min-height: 200px;
+        height: 200px;
         width: 100%;
     }
 }
@@ -119,7 +120,6 @@
     background-color: $colorLightGrey;
     border: 1px solid $colorLightGrey;
 
-
     &:hover,
     &:focus,
     &:active {
@@ -128,4 +128,69 @@
         border: 1px solid $colorWhite;
         cursor: pointer;
     }
+}
+
+@media (max-width: 750px) {
+    .container {
+
+        .title {
+            font-size: $medium;
+            margin-top: 10px;
+        }
+
+        .description {
+            font-size: $text;
+
+            & p {
+                margin-bottom: 10px;
+            }
+        }
+
+        .form {
+            gap: 10px;
+
+            .inputGroup {
+                gap: 10px;
+            }
+
+            .button,
+            .textarea,
+            input {
+                padding: 10px;
+                font-size: $text;
+            }
+
+            .buttonWrapper {
+                position: relative;
+                top: -4px;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 480px) {
+    .container {
+
+        .form {
+            .inputGroup {
+                flex-direction: column;
+            }
+
+            .textarea {
+                height: 100px;
+            }
+            .buttonWrapper {
+                padding: 0;
+
+                .button {
+                    width: 100%;
+                }
+            }
+
+        }
+
+    }
+
 }

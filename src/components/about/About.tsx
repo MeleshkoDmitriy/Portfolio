@@ -27,8 +27,6 @@ export const About = () => {
         }, 500)
     };
 
-
-
     return (
         <section className={styles.container}>
             <div className={styles.imgContainer}>
@@ -41,7 +39,7 @@ export const About = () => {
                 <h1 className={styles.name}>Dmitriy Meleshko</h1>
                 <p className={styles.description}>A young and ambitious Frontend React Developer. My passion lies in creating appealing user interfaces and currently, my main goal is to gain commercial experience in this field. I am ready for active learning, adopting cutting-edge methods and closely collaborating within a team. I have significant experience in communication and successful participation in team events. Actively studying modern technologies in the field of application development.</p>
                 <div className={styles.gmail}>
-                    <span className={styles.icon}><IoIosMail /></span>
+                    <span className={`${styles.icon} ${styles.mailIcon}`}><IoIosMail /></span>
                     <span className={styles.address}>{gmail}</span>
                     <button className={`${styles.copyButton} ${styles.icon}`} onClick={handleCopy}>
                         <FaRegCopy />

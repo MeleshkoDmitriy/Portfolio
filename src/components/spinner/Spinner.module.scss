@@ -1,0 +1,37 @@
+@import '../../app/variables.scss';
+
+.loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    span {
+        background-color: transparent;
+    }
+
+    .spinner {
+        font-size: $medium;
+        background-color: transparent;
+        animation: spinnerAnimation 0.75s infinite;
+    }
+}
+
+@keyframes spinnerAnimation {
+    0% {
+        transform: rotate(0deg);
+        color: $colorLightGrey;
+    }
+
+    75% {
+        color: $colorWhite;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        color: $colorLightGrey;
+    }
+}

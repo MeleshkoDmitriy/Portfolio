@@ -1,8 +1,16 @@
 @import '../../app/variables.scss';
 
+.container {
+    padding-inline: 10px;
+}
+
 .title {
     font-size: $title;
     color: $colorWhite;
+}
+
+.list {
+    padding-left: 20px;
 }
 
 .item {
@@ -11,6 +19,17 @@
     padding-bottom: 10px;
 }
 
-.list {
-    padding-left: 20px;
+@media (max-width: 750px) {
+    .container {
+
+        .title {
+            font-size: $medium;
+        }
+    
+        .item {
+            font-size: $text;
+            padding: 5px;
+        }
+    }
+
 }

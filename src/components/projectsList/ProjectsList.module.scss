@@ -1,9 +1,21 @@
 @import '../../app/variables.scss';
 
+.container {
+    padding-inline: 10px;
+}
 
 .title {
     font-size: $title;
     color: $colorWhite;
     padding: 20px 0;
     margin: 0;
+}
+
+@media (max-width: 750px) {
+    .container {
+
+        .title {
+            font-size: $medium;
+        }
+    }
 }

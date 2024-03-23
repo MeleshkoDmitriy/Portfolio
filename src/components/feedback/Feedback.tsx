@@ -5,6 +5,7 @@ import { createFeedback } from '@/lib/api/api';
 import { calcDate } from '@/lib/utils/utils';
 import { RxCross1 } from "react-icons/rx";
 import { Snackbar } from '../snackbar/Snackbar';
+import { Spinner } from '../spinner/Spinner';
 
 
 export const Feedback = () => {
@@ -22,6 +23,7 @@ export const Feedback = () => {
     const [isAreaActive, setAreaActive] = useState(false);
 
     const [isSnackbar, setSnackbar] = useState(false);
+    const [isSendClicked, setSendClicked] = useState(false);
 
     const ref = createRef<HTMLFormElement>();
 
@@ -43,7 +45,10 @@ export const Feedback = () => {
         });
 
         setFormData(initialFormData);
-        
+
+        setSnackbar(true);
+        setSendClicked(true);
+
         ref.current?.reset();
         setNameActive(false);
         refName.current.value = '';
@@ -52,11 +57,10 @@ export const Feedback = () => {
         setAreaActive(false);
         refArea.current.value = '';
 
-        setSnackbar(true);
-
         setTimeout(() => {
             setSnackbar(false);
-        }, 2500)
+            setSendClicked(false);
+        }, 2000)
     };
 
     const handleChange = (event) => {
@@ -155,7 +159,8 @@ export const Feedback = () => {
                 </div>
                 <div className={styles.buttonWrapper}>
                     <button type='submit' className={styles.button}>
-                        Send feedback
+                        {isSendClicked ? <Spinner height='100%' fontSize='16px'/>
+                                       : 'Send feedback'}
                     </button>
                 </div>
             </form>

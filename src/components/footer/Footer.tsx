@@ -10,7 +10,7 @@ export const Footer = () => {
                                                 target='blank'
                                                 className={styles.link}
                                                 >
-                                                Portfolio repository <SiGithub />
+                                                Portfolio repository <SiGithub className={styles.iconGitHub}/>
                                         </Link>
             </span>
             <div className={styles.stack}>
