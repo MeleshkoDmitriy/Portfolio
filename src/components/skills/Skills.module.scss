@@ -27,11 +27,13 @@
     transition: $transition;
     font-size: $medium;
     color: $colorLightGrey;
+    background-color: $colorDarkGrey;
 
     &:hover {
         color: $colorWhite;
         border: 1px solid $colorWhite;
         cursor: pointer;
+        background-color: $colorBlack;
     }
 }
 

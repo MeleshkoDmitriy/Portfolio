@@ -2,14 +2,21 @@
 
 * {
   box-sizing: border-box;
-  background-color: $colorBlack;
   scroll-behavior: smooth;
+}
+
+html {
+  background-color: $colorBlack;
 }
 
 body {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
+}
+
+::placeholder {
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -22,9 +29,11 @@ a {
 }
 
 .container {
+  transition: $transition;
   width: 900px;
   margin: 0 auto;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }

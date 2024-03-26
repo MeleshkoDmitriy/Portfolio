@@ -4,6 +4,12 @@ import { useRouter } from 'next/navigation';
 import { IoHomeOutline } from "react-icons/io5";
 import { IoIosList } from "react-icons/io";
 import { IoArrowBackOutline } from "react-icons/io5";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Not found',
+  description: "Project not found",
+}
 
 export default function NotFound () {
 

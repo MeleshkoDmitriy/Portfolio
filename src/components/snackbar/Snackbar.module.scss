@@ -13,3 +13,29 @@
     z-index: 100;
     font-weight: bold;
 }
+
+@media (max-width: 920px) {
+    .container {
+      max-width: 740px;
+
+      .snackbar {
+        top: 10px;
+      }
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .container {
+      max-width: 470px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 300px;
+
+      .snackbar {
+        top: 100px;
+      }
+    }
+  }

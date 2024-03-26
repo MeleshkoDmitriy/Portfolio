@@ -28,6 +28,7 @@
     font-size: $medium;
     border-radius: $radius;
     transition: $transition;
+    background-color: $colorDarkGrey;
 
     span {
         position: relative;
@@ -39,5 +40,23 @@
         cursor: pointer;
         border: 1px solid $colorWhite;
         color: $colorWhite;
+        background-color: $colorBlack;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+
+        .title {
+            font-size: $medium;
+        }
+
+        .actions {
+            gap: 10px;
+
+            .button {
+                font-size: $text;
+            }
+        }
     }
 }

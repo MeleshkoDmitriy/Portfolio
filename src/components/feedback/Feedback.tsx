@@ -159,7 +159,7 @@ export const Feedback = () => {
                 </div>
                 <div className={styles.buttonWrapper}>
                     <button type='submit' className={styles.button}>
-                        {isSendClicked ? <Spinner height='100%' fontSize='16px'/>
+                        {isSendClicked ? <Spinner height='100%' fontSize='14px'/>
                                        : 'Send feedback'}
                     </button>
                 </div>

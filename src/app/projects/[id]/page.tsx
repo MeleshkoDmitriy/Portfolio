@@ -4,7 +4,6 @@ import { projects }from '../../../lib/data/data'
 import { SingleProject } from '@/components/singleProject/SingleProject';
 import NotFound from './not-found';
 
-
 export default function SingleProjectPage({ params }: {
     params: { id: number }
 }) {

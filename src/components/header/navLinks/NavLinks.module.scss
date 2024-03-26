@@ -7,22 +7,23 @@
 }
 
 .burgerButton {
-    position: relative;
-    top: 3px;
     display: none;
     color: $colorWhite;
     cursor: pointer;
     outline: none;
     border: none;
     font-size: $title;
+    background-color: $colorBlack;
+    padding: 7px 10px;
+    border-radius: $radius;
+
+    .burgerIcon {
+        position: relative;
+        top: 3px;
+    }
 }
 
-.navMobile {
-    display: block;
-    right: 100%;
-}
-
-@media (max-width: 750px) {
+@media (max-width: 920px) {
     .nav {
         display: none;
     }
@@ -34,9 +35,9 @@
     .navMobile {
         position: fixed;
         top: 80px;
-        right: 0%;
+        right: 0;
         width: 50%;
-        height: calc(100vh - 65px);
+        height: calc(100dvh - 67px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -45,4 +46,10 @@
         background-color: $colorBlack;
     }
 
+}
+
+@media (max-width: 480px) {
+    .burgerButton {
+        padding: 5px 10px;
+    }
 }

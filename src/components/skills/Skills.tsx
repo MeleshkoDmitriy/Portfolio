@@ -28,16 +28,16 @@ export const techs = {
     HTML: <SiHtml5 />,
     CSS: <SiCss3 />,
     SCSS: <SiSass />,
-    SCSSmodules: <SiCssmodules />,
+    'SCSS-modules': <SiCssmodules />,
     JavaScript: <SiJavascript />,
     TypeScript: <SiTypescript />,
     React: <SiReact />,
     Redux: <SiRedux />,
     NextJS: <SiNextdotjs />,
-    ReactQuery: <SiReactquery />,
-    ReactRouter: <SiReactrouter />,
+    'React-Query': <SiReactquery />,
+    'React-Router': <SiReactrouter />,
     Axios: <SiAxios />,
-    StyledComponents: <SiStyledcomponents />,
+    'Styled-Components': <SiStyledcomponents />,
     TailwindCSS: <SiTailwindcss />,
     'Material-UI': <SiMui />,
     AntDesign: <SiAntdesign />,
@@ -53,18 +53,18 @@ export const Skills = () => {
         'TypeScript', 
         'React',
         'NextJS', 
-        'ReactQuery',
+        'React-Query',
         'Redux',
         'Redux Toolkit',
         'RTK Query',  
         'Axios', 
-        'StyledComponents', 
+        'Styled-Components', 
         'TailwindCSS',
         'Material-UI', 
         'AntDesign',
         'CSS', 
         'SCSS', 
-        'SCSSmodules',
+        'SCSS-modules',
         'HTML', 
         'Other Popular Libraries'
     ]
@@ -93,8 +93,8 @@ export const Skills = () => {
             <div className={styles.language}>
                 <h3 className={styles.title}>Languages:</h3>
                 <div className={styles.wrapper}>
-                    <div className={styles.item}><b>Russian</b> – Native</div>
-                    <div className={styles.item}><b>English</b> – Upper Intermediate (B2)</div>
+                    <div className={styles.item}><b className={styles.langs}>Russian</b> – Native</div>
+                    <div className={styles.item}><b className={styles.langs}>English</b> – Upper Intermediate (B2)</div>
                 </div>
             </div>
         </section>

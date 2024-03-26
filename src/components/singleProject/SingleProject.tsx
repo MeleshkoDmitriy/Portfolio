@@ -64,17 +64,17 @@ export const SingleProject = ( project ) => {
                         <div className={styles.actions}>
                                     <Link href={github} target='blank'>
                                         <button className={styles.button}>
-                                                GitHub {techs.GitHub}
+                                                GitHub <span>{techs.GitHub}</span>
                                         </button>
                                     </Link>
                                     <Link href={netlify} target='blank'>
                                         <button className={styles.button}>
-                                                Netlify {techs.Netlify}
+                                                Netlify <span>{techs.Netlify}</span>
                                         </button>
                                     </Link>
                                     <Link href='/'>
                                         <button className={styles.button}>
-                                                Home Page <IoHomeOutline />
+                                                Home <span><IoHomeOutline /></span>
                                         </button>
                                     </Link>
                         </div>

@@ -2,6 +2,7 @@ $colorWhite: rgb(241, 242, 249);
 $colorBlack: #131315;
 $colorDarkGrey: #19191c;
 $colorLightGrey: rgb(150, 147, 147);
+$colorYellow: #fffb28;
 
 $colorGitHub: #e3e3e3;
 $colorTelegram: #2C9FD5;
@@ -12,7 +13,7 @@ $transition: 0.3s;
 
 $radius: 5px;
 
-$extra: 30px;
-$title: 24px;
-$medium: 20px;
-$text: 16px;
+$extra: 1.875rem; // 30
+$title: 1.5rem; // 24
+$medium: 1.25rem; // 20
+$text: 1rem; // 16

@@ -10,7 +10,7 @@ export const projects = [
         title: 'Online Shop Pioneer',
         image: onlineShop,
         description: 'Online Shop Pioneer is a web application that serves as an online marketplace for a wide range of products. Users can browse through different product categories, view detailed product descriptions, add items to their cart, set favorites products and make orders.',
-        stack: ['React', 'Redux', 'Redux Toolkit', 'RTK Query', 'TypeScript', 'StyledComponents', 'AntDesign', 'Axios', 'ReactRouter'],
+        stack: ['React', 'Redux', 'Redux Toolkit', 'RTK Query', 'TypeScript', 'Styled-Components', 'AntDesign', 'Axios', 'React-Router'],
         features: [
             'User-friendly interface and design created using modern and aesthetically pleasing tools and technologies.',
             'Product catalog with various categories and the ability to filter products by price.',
@@ -27,7 +27,7 @@ export const projects = [
         title: 'Todolist App',
         image: todolist,
         description: 'This is a TodoList application built with React and TypeScript. The app allows users to create, update, and delete tasks in various categories. It also provides features like marking tasks as completed and filtering tasks based on category.',
-        stack: ['React', 'TypeScript', 'ReactQuery', 'TailwindCSS', 'SCSSmodules', 'SCSS', 'Axios', 'ReactRouter'],
+        stack: ['React', 'TypeScript', 'React-Query', 'TailwindCSS', 'SCSS-modules', 'SCSS', 'Axios', 'React-Router'],
         features: [
             'Create new tasks with specified category and title.',
             'Update the completion status of tasks.',
@@ -43,7 +43,7 @@ export const projects = [
         title: 'Muisic',
         image: muisic,
         description: 'Muisic - Music App made up with MUI library and React. It is simple web application which gives you opportunity to listen music. This project have only one electronic playlist right now, but it is can be more.',
-        stack: ['React', 'JavaScript', 'Material-UI', 'SCSSmodules', 'SCSS', 'Axios'],
+        stack: ['React', 'JavaScript', 'Material-UI', 'SCSS-modules', 'SCSS', 'Axios'],
         features: [
             'Listen songs and switch them.',
             'Like and save your favourite tracks.',

@@ -30,6 +30,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        background-color: $colorBlack;
     }
 
 }
@@ -44,6 +45,7 @@
     color: $colorLightGrey;
     text-align: justify;
     font-size: $text;
+    line-height: 22px;
 }
 
 .gmail {
@@ -55,13 +57,12 @@
         color: $colorWhite;
     }
 
-
     .icon {
         font-size: $medium;
     }
 
     .address {
-        padding-inline: 20px;
+        padding: 0 20px 0 10px;
         position: relative;
         top: -3px;
         font-size: $medium;
@@ -73,6 +74,7 @@
         border: none;
         cursor: pointer;
         margin-right: 20px;
+        background-color: $colorBlack;
     }
 
     .doneWrapper {
@@ -184,11 +186,12 @@
 
         .address {
             padding-inline: 0;
-            margin-right: 5px;
+            margin-right: 0px;
         }
 
         .copyButton {
-            margin-right: 5px;
+            margin-right: 0px;
+            padding-inline: 0;
         }
 
         .socialIcons {
@@ -214,3 +217,6 @@
     }
 }
 
+// @media (max-width: 450px) {
+
+// }

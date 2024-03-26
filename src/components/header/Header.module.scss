@@ -2,53 +2,85 @@
 
 .header {
     color: $colorWhite;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px;
     position: sticky;
     top: 0;
     z-index: 100;
     min-height: 80px;
-    background-color: $colorBlack;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
 }
+
+.container {
+    width: 900px;
+    min-height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+  }
+  
 
 .offer {
     border-radius: $radius;
     background-color: $colorBlack;
+    font-size: $medium;
+    padding: 10px;
 
     .currently {
         color: $colorWhite;
     }
 
-    .dot {
-        border: 3px solid $colorWhite;
-        border-radius: 50%;
-        width: 2px;
-        height: 2px;
+    .bulb {
         position: relative;
-        top: -3px;
-        left: 10px;
+        top: 3px;
+        margin-left: 5px;
+        shape-rendering: auto;
         animation: pulseAnimation 2s infinite;
     }
 }
 
 @keyframes pulseAnimation {
     0% {
-        box-shadow: 0 0 0px $colorWhite;
+        filter: drop-shadow(0 0 0 $colorYellow);
+        shape-rendering: auto;
     }
 
-    30% {
-        box-shadow:  0 0 10px $colorWhite;
+    50% {
+        filter: drop-shadow(0 0 2px $colorYellow);
+        shape-rendering: auto;
     }
 
     100% {
-        box-shadow: 0 0 0px $colorWhite;
+        filter: drop-shadow(0 0 0 $colorYellow);
+        shape-rendering: auto;
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 920px) {
+    .container {
+      width: 740px;
+    }
+  }
+  
+  @media (max-width: 750px) {
     .header {
         font-size: $text;
+
+        .container {
+            width: 470px;
+          }
     }
-}
+
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 300px;
+
+        .offer {
+            font-size: $text;
+        }
+    }
+  }

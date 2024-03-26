@@ -16,6 +16,13 @@
 
     .imageWrapper {
         position: relative;
+        transition: $transition;
+        filter: grayscale(100%);
+
+        &:hover {
+            filter: grayscale(0%);
+            cursor: pointer;
+        }
 
         .image {
             width: 100%;
@@ -56,6 +63,8 @@
     display: flex;
     gap: 20px;
     align-self: start;
+    position: relative;
+    top: 5px;
 
     .icon {
         font-size: $extra;
@@ -77,6 +86,7 @@
     font-size: $medium;
     border-radius: $radius;
     transition: $transition;
+    background-color: $colorDarkGrey;
 
     span {
         position: relative;
@@ -88,6 +98,7 @@
         cursor: pointer;
         color: $colorWhite;
         border: 1px solid $colorWhite;
+        background-color: $colorBlack;
     }
 }
 
@@ -141,10 +152,13 @@
             width: 100%;
 
             .iconsWrapper {
+                top: 0px;
                 align-self: center;
+                gap: 10px;
             }
 
             .actions {
+                gap: 10px;
 
                 .button {
                     font-size: $text;

@@ -4,6 +4,12 @@ import styles from './NotFound.module.scss';
 import { IoHomeOutline } from "react-icons/io5";
 import { IoIosList } from "react-icons/io";
 import { IoArrowBackOutline } from "react-icons/io5";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Not found',
+  description: "Page not found",
+}
 
 export default function NotFound () {
 
