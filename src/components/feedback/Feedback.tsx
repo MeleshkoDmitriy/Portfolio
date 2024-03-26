@@ -1,40 +1,39 @@
 "use client"
-import { createRef, useState } from 'react';
+import { ChangeEvent, FormEvent, MutableRefObject, createRef, useState } from 'react';
 import styles from './Feedback.module.scss';
 import { createFeedback } from '@/lib/api/api';
 import { calcDate } from '@/lib/utils/utils';
 import { RxCross1 } from "react-icons/rx";
 import { Snackbar } from '../snackbar/Snackbar';
 import { Spinner } from '../spinner/Spinner';
+import { TFormData } from '@/lib/types/types';
 
+const initialFormData: TFormData = {
+    name: '',
+    contact: '',
+    text: '',
+    date: '',
+};
 
 export const Feedback = () => {
+    const [formData, setFormData] = useState<TFormData>(initialFormData);
 
-    const initialFormData = {
-        name: '',
-        contact: '',
-        text: ''
-    };
+    const [isNameActive, setNameActive] = useState<boolean>(false);
+    const [isContactActive, setContactActive] = useState<boolean>(false);
+    const [isAreaActive, setAreaActive] = useState<boolean>(false);
 
-    const [formData, setFormData] = useState(initialFormData);
-
-    const [isNameActive, setNameActive] = useState(false);
-    const [isContactActive, setContactActive] = useState(false);
-    const [isAreaActive, setAreaActive] = useState(false);
-
-    const [isSnackbar, setSnackbar] = useState(false);
-    const [isSendClicked, setSendClicked] = useState(false);
+    const [isSnackbar, setSnackbar] = useState<boolean>(false);
+    const [isSendClicked, setSendClicked] = useState<boolean>(false);
 
     const ref = createRef<HTMLFormElement>();
 
-    const refName = createRef<HTMLFormElement>();
-    const refContact = createRef<HTMLFormElement>();
-    const refArea = createRef<HTMLFormElement>();
-
-
-    const handleSubmit = async (event) => {
+    const refName = createRef<HTMLInputElement | null>() as MutableRefObject<HTMLInputElement | null>;
+    const refContact = createRef<HTMLInputElement | null>() as MutableRefObject<HTMLInputElement | null>;
+    const refArea = createRef<HTMLTextAreaElement | null>() as MutableRefObject<HTMLTextAreaElement | null>;
+    
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
+      
         const nameValue = formData.name.trim() === '' ? 'user unknown' : formData.name;
         const contactValue = formData.contact.trim() === '' ? 'without contacts' : formData.contact;
         await createFeedback({
@@ -43,67 +42,67 @@ export const Feedback = () => {
           contact: contactValue,
           date: calcDate(),
         });
-
+      
         setFormData(initialFormData);
-
+      
         setSnackbar(true);
         setSendClicked(true);
-
+      
         ref.current?.reset();
         setNameActive(false);
-        refName.current.value = '';
-        setContactActive(false);
-        refContact.current.value = '';
-        setAreaActive(false);
-        refArea.current.value = '';
-
-        setTimeout(() => {
-            setSnackbar(false);
-            setSendClicked(false);
-        }, 2000)
-    };
-
-    const handleChange = (event) => {
-        if(event.target.name === 'name') {
-            if(event.target.value) {
-                setNameActive(true);
-            } else {
-                setNameActive(false);
-            }
-        } else if(event.target.name === 'contact') {
-            if(event.target.value) {
-                setContactActive(true);
-            } else {
-                setContactActive(false);
-            }
-        } else if(event.target.name === 'text') {
-            if(event.target.value) {
-                setAreaActive(true);
-            } else {
-                setAreaActive(false);
-            }
+        if (refName.current) {
+          refName.current.value = refName.current?.value ?? '';
         }
+        setContactActive(false);
+        if (refContact.current) {
+          refContact.current.value = refContact.current?.value ?? '';
+        }
+        setAreaActive(false);
+        if (refArea.current) {
+          refArea.current.value = '';
+        }
+      
+        setTimeout(() => {
+          setSnackbar(false);
+          setSendClicked(false);
+        }, 2000);
+    };
+    
+    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        if (event.target.name === 'name') {
+            setNameActive(!!event.target.value);
+          } else if (event.target.name === 'contact') {
+            setContactActive(!!event.target.value);
+          } else if (event.target.name === 'text') {
+            setAreaActive(!!event.target.value);
+          }
+
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
     const handlerNameDelete = () => {
-        setFormData({...formData, name: ''});
+        setFormData({ ...formData, name: '' });
         setNameActive(false);
-        refName.current.value = '';
-    };
-
-    const handlerContactDelete = () => {
-        setFormData({...formData, contact: ''});
+        if (refName.current) {
+          refName.current.value = '';
+        }
+      };
+      
+      const handlerContactDelete = () => {
+        setFormData({ ...formData, contact: '' });
         setContactActive(false);
-        refContact.current.value = '';
-    };
-
-    const handlerAreaDelete = () => {
-        setFormData({...formData, text: ''});
+        if (refContact.current) {
+          refContact.current.value = '';
+        }
+      };
+      
+      const handlerAreaDelete = () => {
+        setFormData({ ...formData, text: '' });
         setAreaActive(false);
-        refArea.current.value = '';
-    };
-
+        if (refArea.current) {
+          refArea.current.value = '';
+        }
+      };
 
     return (
         <>
@@ -159,7 +158,7 @@ export const Feedback = () => {
                 </div>
                 <div className={styles.buttonWrapper}>
                     <button type='submit' className={styles.button}>
-                        {isSendClicked ? <Spinner height='100%' fontSize='14px'/>
+                        {isSendClicked ? <Spinner heightSize='100%' fontSize='14px'/>
                                        : 'Send feedback'}
                     </button>
                 </div>

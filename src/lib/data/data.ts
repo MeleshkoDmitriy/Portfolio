@@ -2,9 +2,9 @@ import onlineShop from '../../../public/screens/onlineShop.jpeg';
 import todolist from '../../../public/screens/todolist.jpeg';
 import muisic from '../../../public/screens/muisic.jpeg';
 import wildturkey from '../../../public/screens/wildTurkey.jpeg';
+import { TProject } from '../types/types';
 
-
-export const projects = [
+export const projects: TProject[] = [
     {   
         id: 4,
         title: 'Online Shop Pioneer',

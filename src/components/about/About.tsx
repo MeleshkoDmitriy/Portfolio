@@ -2,7 +2,7 @@
 import Image from "next/image"
 import styles from "./About.module.scss"
 import dmitriy from "../../../public/image/dmitriy.jpeg"
-import { useState } from "react"
+import { FC, useState } from "react"
 import { FaRegCopy } from "react-icons/fa";
 import { IoMdDoneAll } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
@@ -13,9 +13,9 @@ import { IoDocumentTextSharp } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 
 
-export const About = () => {
+export const About:FC = () => {
 
-    const [ isGmailCopied, setGmailCopied ] = useState(false);
+    const [ isGmailCopied, setGmailCopied ] = useState<boolean>(false);
 
     const gmail = "dimitrusmeleskausas@gmail.com";
 

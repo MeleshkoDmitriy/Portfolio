@@ -1,5 +1,6 @@
 import styles from "./Skills.module.scss"
 import Link from 'next/link';
+import { FC } from "react";
 
 
 
@@ -24,7 +25,7 @@ import {
     SiNetlify
 } from "react-icons/si";
 
-export const techs = {
+export const techs: { [key: string]: JSX.Element } = {
     HTML: <SiHtml5 />,
     CSS: <SiCss3 />,
     SCSS: <SiSass />,
@@ -45,7 +46,7 @@ export const techs = {
     Netlify: <SiNetlify />,
 }
 
-export const Skills = () => {
+export const Skills:FC = () => {
 
 
     const skillsList = [

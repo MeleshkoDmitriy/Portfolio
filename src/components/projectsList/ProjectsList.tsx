@@ -1,10 +1,10 @@
 import { projects } from '@/lib/data/data'
 import styles from './ProjectsList.module.scss'
 import { Project } from './project/Project'
+import { FC } from 'react'
 
 
-export const ProjectsList = () => {
-
+export const ProjectsList:FC = () => {
 
     return (
         <div className={styles.container}>

@@ -35,7 +35,6 @@ export default function NotFound () {
                         <span><IoHomeOutline /></span>Home 
                     </button>
                 </div>
-            
         </div>
     )
 }

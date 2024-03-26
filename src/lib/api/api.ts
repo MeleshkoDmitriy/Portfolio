@@ -1,6 +1,8 @@
+import { TFormData } from "../types/types";
+
 export const API_URL:string = 'https://2973b8a6249c7b11.mokky.dev';
 
-async function createFeedback(data) {  
+async function createFeedback(data: TFormData) {  
     const { 
         name,
         contact, 
@@ -23,3 +25,4 @@ async function createFeedback(data) {
 }    
   
 export { createFeedback };
+

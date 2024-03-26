@@ -133,6 +133,13 @@
     }
 }
 
+@media (max-width: 920px) {
+    .iconsWrapper,
+    .actions {
+        gap: 10px;
+    }
+}
+
 @media (max-width: 750px) {
     .container {
         gap: 10px;
@@ -154,11 +161,9 @@
             .iconsWrapper {
                 top: 0px;
                 align-self: center;
-                gap: 10px;
             }
 
             .actions {
-                gap: 10px;
 
                 .button {
                     font-size: $text;

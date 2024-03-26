@@ -2,8 +2,9 @@ import Link from 'next/link'
 import styles from './Footer.module.scss';
 import { SiGithub, SiNextdotjs, SiReact, SiTypescript, SiSass, SiCssmodules } from "react-icons/si";
 import { PiFramerLogoFill } from "react-icons/pi";
+import { FC } from 'react';
 
-export const Footer = () => {
+export const Footer:FC = () => {
     return (
         <footer className={styles.footer}>
             <span className={styles.info}>Made by Dmitriy Meleshko.   <Link   href='https://github.com/MeleshkoDmitriy/Portfolio'
@@ -43,8 +44,6 @@ export const Footer = () => {
 
                 </div>
             </div>
-
-
         </footer>
     )
 }

@@ -1,7 +1,7 @@
+import { FC } from 'react';
 import styles from './Experience.module.scss';
 
-
-export const Experience = () => {
+export const Experience:FC = () => {
     return (
         <section className={styles.container}>
             <h3 className={styles.title}>Experience:</h3>

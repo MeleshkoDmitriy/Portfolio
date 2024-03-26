@@ -27,35 +27,55 @@
     background-color: $colorBlack;
     font-size: $medium;
     padding: 10px;
+    animation: bgcAnimation 3s infinite;
 
     .currently {
         color: $colorWhite;
     }
 
-    .bulb {
-        position: relative;
-        top: 3px;
-        margin-left: 5px;
-        shape-rendering: auto;
-        animation: pulseAnimation 2s infinite;
-    }
+    // .bulb {
+    //     position: relative;
+    //     top: 3px;
+    //     margin-left: 5px;
+    //     shape-rendering: auto;
+    //     animation: pulseAnimation 2s infinite;
+    // }
 }
 
-@keyframes pulseAnimation {
-    0% {
-        filter: drop-shadow(0 0 0 $colorYellow);
-        shape-rendering: auto;
-    }
+// @keyframes pulseAnimation {
+//     0% {
+//         filter: drop-shadow(0 0 0 $colorYellow);
+//         shape-rendering: auto;
+//     }
 
-    50% {
-        filter: drop-shadow(0 0 2px $colorYellow);
-        shape-rendering: auto;
-    }
+//     50% {
+//         filter: drop-shadow(0 0 2px $colorYellow);
+//         shape-rendering: auto;
+//     }
 
-    100% {
-        filter: drop-shadow(0 0 0 $colorYellow);
-        shape-rendering: auto;
-    }
+//     100% {
+//         filter: drop-shadow(0 0 0 $colorYellow);
+//         shape-rendering: auto;
+//     }
+// }
+
+
+@keyframes bgcAnimation {
+  0% {
+      background-color: $colorBlack;
+  }
+
+  50% {
+      background-color: $colorBlack;
+  }
+
+  75% {
+      background-color: $colorDarkGrey;
+  }
+
+  100% {
+      background-color: $colorBlack;
+  }
 }
 
 @media (max-width: 920px) {

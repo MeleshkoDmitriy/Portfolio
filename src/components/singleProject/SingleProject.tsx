@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import styles from './SingleProject.module.scss';
 import Link from 'next/link';
-import { techs } from '../skills/Skills';
 import { IoHomeOutline } from "react-icons/io5";
+import { TProject } from '@/lib/types/types';
+import { techs } from '../skills/Skills';
 
-
-export const SingleProject = ( project ) => {
+export const SingleProject = ( project: TProject ) => {
 
     const { 
-        id,
         title,
         description,
         image,
@@ -19,7 +18,7 @@ export const SingleProject = ( project ) => {
      } = project;
 
     return (
-        <section className={styles.container} id={id}>
+        <section className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <div className={styles.imageWrapper}>
                     <Image

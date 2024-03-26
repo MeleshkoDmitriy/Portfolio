@@ -1,50 +1,10 @@
 import Image from 'next/image';
 import styles from './Project.module.scss';
 import Link from 'next/link';
+import { TProject } from '@/lib/types/types';
+import { techs } from '@/components/skills/Skills';
 
-import { 
-    SiHtml5, 
-    SiCss3, 
-    SiSass, 
-    SiCssmodules,
-    SiJavascript,
-    SiTypescript,
-    SiReact,
-    SiRedux,
-    SiNextdotjs,
-    SiReactquery,
-    SiReactrouter,
-    SiAxios,
-    SiStyledcomponents,
-    SiTailwindcss,
-    SiMui,
-    SiAntdesign,
-    SiGithub,
-    SiNetlify
-} from "react-icons/si";
-
-export const techs = {
-    HTML: <SiHtml5 />,
-    CSS: <SiCss3 />,
-    SCSS: <SiSass />,
-    'SCSS-modules': <SiCssmodules />,
-    JavaScript: <SiJavascript />,
-    TypeScript: <SiTypescript />,
-    React: <SiReact />,
-    Redux: <SiRedux />,
-    NextJS: <SiNextdotjs />,
-    'React-Query': <SiReactquery />,
-    'React-Router': <SiReactrouter />,
-    'Axios': <SiAxios />,
-    'Styled-Components': <SiStyledcomponents />,
-    TailwindCSS: <SiTailwindcss />,
-    'Material-UI': <SiMui />,
-    'AntDesign': <SiAntdesign />,
-    GitHub: <SiGithub />,
-    Netlify: <SiNetlify />,
-}
-
-export const Project = ( project ) => {
+export const Project = ( project: TProject ) => {
 
     const { 
             id,
