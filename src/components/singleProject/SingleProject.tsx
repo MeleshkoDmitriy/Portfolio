@@ -21,10 +21,12 @@ export const SingleProject = ( project: TProject ) => {
         <section className={styles.container}>
             <h1 className={styles.title}>{title}</h1>
             <div className={styles.imageWrapper}>
+                <Link href={netlify}>
                     <Image
                         src={image}  alt={title} 
                         className={styles.image}
                         placeholder='blur'/>
+                </Link>
             </div>
             <div className={styles.body}>
                 <div className={styles.description}>

@@ -22,11 +22,13 @@ export const Project = ( project: TProject ) => {
                 {title}
             </h3>
             <div className={styles.imageWrapper}>
+                <Link href={`/projects/${id}`}>
                     <Image 
                         src={image}  alt={title} 
                         className={styles.image}
                         loading='lazy'
                         placeholder='blur'/>
+                </Link>
             </div>
             <div className={styles.body}>
                 <div className={styles.description}>
